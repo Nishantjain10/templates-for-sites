@@ -3,7 +3,7 @@ import './App.css'
 import { useForm, ValidationError } from "@formspree/react";
 
 function App() {
-  const [state, handleSubmit] = useForm("FORM_ID");
+  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_FORM_ID);
 
   if (state.succeeded) {
     return (
@@ -228,8 +228,8 @@ function App() {
                 </label>
                 <select
                   className="w-full h-10 px-4 rounded-lg outline outline-1 outline-gray-400 hover:outline-gray-600 focus:outline-2 focus:outline-blue-500 transition-all duration-200 appearance-none bg-white"
-                  id="dates"
-                  name="dates"
+                  id="position"
+                  name="position"
                 >
                   <option value="software-engineer">Software Engineer</option>
                   <option value="senior-software-engineer">Senior Software Engineer</option>
